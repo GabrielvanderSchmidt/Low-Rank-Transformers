@@ -1,0 +1,26 @@
+# Python Build Artifacts & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# uv Caches
+.cache/
+.ruff_cache/
+
+# Docker & Version Control
+.git/
+.dockerignore
+Dockerfile*
+docker-compose*
+
+# Environments
+.env
+.envrc
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
