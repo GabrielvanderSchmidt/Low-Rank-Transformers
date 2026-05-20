@@ -13,3 +13,12 @@ dependencies = [
     "tokenizers==0.22.2",
     "transformers[torch]==5.5.0",
 ]
+
+[dependency-groups]
+dev = [
+    "jupyter",
+    "jupyter_http_over_ws",
+    "ipykernel",
+    "matplotlib",
+    "plotly",
+]

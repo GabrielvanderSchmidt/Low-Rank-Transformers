@@ -13,5 +13,8 @@ RUN uv sync --locked --no-install-project --no-cache
 # Copy repo files and sync
 COPY . /workspace
 RUN uv sync --locked --no-cache
+RUN uv run jupyter server extension enable --py jupyter_http_over_ws
 
-CMD ["/bin/bash"]
+EXPOSE 8888
+CMD ["uv", "run", "jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser", \
+    "--NotebookApp.allow_origin='https://colab.research.google.com'"]
